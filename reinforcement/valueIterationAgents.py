@@ -12,6 +12,12 @@
 # Pieter Abbeel (pabbeel@cs.berkeley.edu).
 
 
+import mdp
+import util
+import random
+from learningAgents import ValueEstimationAgent
+
+
 class ValueIterationAgent(ValueEstimationAgent):
     """
         * Please read learningAgents.py before reading this.*
