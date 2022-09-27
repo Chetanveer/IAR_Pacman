@@ -55,6 +55,8 @@ class ValueIterationAgent(ValueEstimationAgent):
             copyofValues = self.values.copy()
 
             for state in self.mdp.getStates():
+                print(state)
+                print("jilles")
                 maxValue = None
 
                 for action in self.mdp.getPossibleActions(state):
