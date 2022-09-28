@@ -58,7 +58,7 @@ class QLearningAgent(ReinforcementAgent):
         "*** YOUR CODE HERE ***"
         # print(self.QValuesDictionary)
         # print(self.QValuesDictionary[state])
-
+        # All the Q values are stored in the dictionary QValuesDictionary
         if (self.QValuesDictionary[(state, action)] == 0):
             return 0.0
         else:
