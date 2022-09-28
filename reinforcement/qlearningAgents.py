@@ -131,9 +131,23 @@ class QLearningAgent(ReinforcementAgent):
         legalActions = self.getLegalActions(state)
         action = None
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        if len(legalActions) == 0:
+            return action
+        else:
+            # In this part we are focussing on the exploration part. We make a bernoulli distribution which will return True with probability p
+            # if True, then we choose any random action(we are exploring)
+            # if False, we choose the best action according to the policy
 
-        return action
+            prob = util.flipCoin(self.epsilon)
+            if (prob == True):
+                # probability is true. We choose any legal action
+                action = prob * random.choice(legalActions)
+            else:
+                # probability is false. We choose the best action
+                action = self.getPolicy(state)
+
+            return action
+            # util.raiseNotDefined()
 
     def update(self, state, action, nextState, reward):
         """
