@@ -93,19 +93,19 @@ class QLearningAgent(ReinforcementAgent):
         """
         "*** YOUR CODE HERE ***"
         legalActions = self.getLegalActions(state)
-        print('legal actions legalActions')
+        #print('legal actions legalActions')
         if len(legalActions) != 0:
             stateValues = []
             possibleAction = []
             for action in legalActions:
                 stateValues.append(self.getQValue(state, action))
-                print(self.getQValue(state, action))
+                #print(self.getQValue(state, action))
                 possibleAction.append(action)
 
             maximumValue = max(stateValues)
 
             bestValues = []
-            print(bestValues)
+            # print(bestValues)
             for i in range(len(stateValues)):
                 if stateValues[i] == maximumValue:
                     bestValues.append(i)
