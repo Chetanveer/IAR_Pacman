@@ -171,7 +171,7 @@ class GameState:
         return [s.getPosition() for s in self.getGhostStates()]
 
     def getActiveGhostPositions(self):
-        return [g.getPosition() for g in self.getGhostStates() if g.scaredTimer < SCARED_TIME/2]
+        return [g.getPosition() for g in self.getGhostStates() if g.scaredTimer < SCARED_TIME/4]
 
     def getScaredGhostPositions(self):
         return [g.getPosition() for g in self.getGhostStates() if g.scaredTimer == 0]
